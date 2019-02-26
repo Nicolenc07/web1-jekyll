@@ -6,14 +6,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Title goes here</title>
 	<meta name="description" content="{{ page.description }}">
-	
+
 	<!-- Enable responsive layouts; tell browsers not to shrink pages to fit small screens -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Load styles -->
 	<!-- For production, combine all of the stylesheets -->
 	<link rel="stylesheet" href="{{ site.baseurl }}/css/sitewide.css">
-	
+
 	<!-- Webfonts -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
@@ -33,7 +33,7 @@
 			<li><a href="{{ site.baseurl }}/groundhog.html">Groundhog</a></li>
 			</ul>
 		</nav>
-		
+
 	<hr>
 		{% for p in site.pages %}
 			{% if page.animal=="rodent" %}
@@ -41,24 +41,24 @@
 			{% endif %}
 		{% endfor %}
 	<hr>
-		
+
         <h1>{{ page.title }}</h1>
-		
+
 		{{ content }}
-		
+
 		{% if page.animal=="rodent" %}
 			We've got rodents!
 		{% endif %}
 
 		<hr>
 
-		<p>Your color is: {{ page.color }}</p>
+		<p>Your color is not: {{ page.color }}</p>
 
         {% if page.date %}
     		<p>Updated {{ page.date | date: "%A, %B %-d, %Y" }}</p>
         {% endif %}
-		
+
 	</div><!-- end container -->
-	
+
 </body>
 </html>
